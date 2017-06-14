@@ -1,0 +1,35 @@
+{
+  "type": "record",
+  "name": "PersonInfo",
+  "namespace": "chana",
+  "fields": [
+    {
+      "name": "name",
+      "type": "string"
+    },
+    {
+      "name": "age",
+      "type": "int"
+    },
+    {
+      "name": "gender",
+      "type": {
+        "type": "enum",
+        "name": "GenderType",
+        "symbols": [
+          "Female",
+          "Male",
+          "Unknown"
+        ]
+      },
+      "default": "Unknown"
+    },
+    {
+      "name": "emails",
+      "type": {
+        "type": "array",
+        "items": "string"
+      }
+    }
+  ]
+}
